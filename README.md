@@ -1,22 +1,22 @@
-Role Name
+Ansible Role:  SQL Server
 =========
 
-A brief description of the role goes here.
+Ansible role to install SQL Server on RHEL/CentOS
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+This role requires PHP to be installed.  For playbooks declaring a list of roles ensure that the PHP role is listed above this role.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+None.
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+This role installs the `php-sqlsrv` extension requiring PHP to be installe first.  The php-sqsrv extension requires the Microsoft msodbc package which is why the php extension is installed with this role.
 
 Example Playbook
 ----------------
@@ -25,14 +25,14 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: jhd3.rolename }
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Created in 2019 by James Dugger for Cyberitas Technologies, LLC
