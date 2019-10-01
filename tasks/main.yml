@@ -1,0 +1,19 @@
+# roles/sqlserver/tasks/main.yml
+---
+- name: Install Microsoft Packages repo.
+  yum:
+    name: https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+    state: present
+
+- name: Install Microsoft msodbc with EULA
+  package:
+    name: msodbcsql17
+    state: latest
+  environment:
+    ACCEPT_EULA: 'y'
+
+- name: Install Microsoft sqlsrv PHP extension
+  yum:
+    name: 'php-sqlsrv'
+    state: latest
+
