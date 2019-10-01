@@ -16,7 +16,7 @@ None.
 Dependencies
 ------------
 
-This role installs the `php-sqlsrv` extension requiring PHP to be installe first.  The php-sqsrv extension requires the Microsoft msodbc package which is why the php extension is installed with this role.
+This role installs the `php-sqlsrv` extension requiring PHP to be installed first.  The extension requires the Microsoft `msodbc` package which is why this php extension is installed in this role.
 
 Example Playbook
 ----------------
