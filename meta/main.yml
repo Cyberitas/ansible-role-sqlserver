@@ -1,5 +1,6 @@
 galaxy_info:
   author: James Dugger
+  role_name: sqlserver
   description: Install SQL Server on RHEL/CentOS
   company: Cyberitas Technologies, LLC
   license: license (MIT)
